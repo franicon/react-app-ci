@@ -1,5 +1,5 @@
 build
 coverage
 node_modules
-config.js
+release.config.js
 package-lock.json
