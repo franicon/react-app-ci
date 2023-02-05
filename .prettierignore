@@ -2,4 +2,5 @@ build
 coverage
 node_modules
 release.config.js
+commitlint.config.js
 package-lock.json
