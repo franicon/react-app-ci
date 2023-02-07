@@ -9778,7 +9778,7 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
 try {
-    const name = core.getInput('who-to-greet');
+    const name = core.getInput("who-to-greet");
     console.log(`Hello ${name}`)
 
     const time = new Date();
