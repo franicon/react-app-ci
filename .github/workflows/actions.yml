@@ -1,12 +1,9 @@
 name: Test Action
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  Test:
+  Test-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,5 +11,6 @@ jobs:
         id: hello
         with:
           who-to-greet: "World"
-      - run echo "Time: ${{steps.hello.outputs.time}}"
+      - run: |
+          echo "Time: ${{steps.hello.outputs.time}}"
 
