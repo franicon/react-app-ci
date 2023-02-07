@@ -1,4 +1,4 @@
-name: Testing
+name: Test Action
 
 on: push
 
@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: .github/actions/hello/index.js
+      - uses: ./.github/actions/hello
         id: hello
         with:
           who-to-greet: "World"
       - run: |
-          echo "Time: ${{steps.hello.ouputs.time}}"
+          echo "Time: ${{ steps.hello.outputs.time }}"
 
