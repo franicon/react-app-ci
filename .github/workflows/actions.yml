@@ -15,7 +15,7 @@ jobs:
           body: Body
           assignees: 'franicon'
       - run: |
-          echo ${{ steps.issue.output.issue }}
+          echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello
         id: hello
         with:
