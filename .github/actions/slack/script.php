@@ -7,7 +7,7 @@ var_dump($argv);
 var_dump($_ENV);
 
 $response = Requests::post(
-    $_ENV['INPUT_SLACK_WEBHOOK']
+    $_ENV['INPUT_SLACK_WEBHOOK'],
     array(
        "content-type" => "application/json"
     ),
