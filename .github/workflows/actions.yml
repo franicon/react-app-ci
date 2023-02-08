@@ -7,6 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: ./.github/actions/slack
+        id: slack
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+          message: Sending test
       - uses: ./.github/actions/issue
         id: issue
         with:
