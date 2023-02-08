@@ -1,0 +1,16 @@
+name: Send Slack Message
+author: franicon
+description: 'Send Slack Message'
+inputs:
+  slack_webhook:
+    description: 'slack Webhook'
+    required: true
+  message:
+    description: 'Slack Message'
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.slack_webhook }}
+    - ${{ inputs.message }}
