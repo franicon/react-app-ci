@@ -16,7 +16,7 @@ jobs:
           assignees: 'franicon'
       - run: |
           echo ${{ steps.issue.outputs.issue }}
-      - uses: ./.github/actions/hello
+      - uses: ./.github/actions/docker
         id: hello
         with:
           who-to-greet: "World"
