@@ -20,7 +20,7 @@ const github = require('@actions/github');
 
         core.setOutput('issue', JSON.stringify(response.data));
 
-    } catch (error) {
+    }catch (error) {
         core.setFailed(error.message);
     }
 })()

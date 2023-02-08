@@ -9777,7 +9777,7 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
-async function run() {
+(async function () {
     try {
         const token = core.getInput('token');
         const title = core.getInput('title');
@@ -9796,12 +9796,10 @@ async function run() {
 
         core.setOutput('issue', JSON.stringify(response.data));
 
-    } catch (error) {
+    }catch (error) {
         core.setFailed(error.message);
     }
-}
-
-run();
+})()
 
 
 })();
