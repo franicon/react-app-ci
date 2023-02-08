@@ -9784,7 +9784,7 @@ async function run() {
         const body = core.getInput('body');
         const assignees = core.getInput('assignees');
 
-        const octokit = new github.Github(token);
+        const octokit = new github.getOctokit(token);
 
         const response = await octokit.rest.issues.create({
             owner: github.context.repo.owner,
@@ -9795,6 +9795,7 @@ async function run() {
         });
 
         core.setOutput('issue', JSON.stringify(response.data));
+
     } catch (error) {
         core.setFailed(error.message);
     }
